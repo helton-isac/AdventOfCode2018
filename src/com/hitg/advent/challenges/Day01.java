@@ -8,6 +8,9 @@ import java.util.Set;
 
 public class Day01 extends AbstractDay implements DayChallenge {
 
+	int firstResult = -1;
+	int secondResult = -1;
+
 	/**
 	 * Public Constructor.
 	 * 
@@ -37,8 +40,7 @@ public class Day01 extends AbstractDay implements DayChallenge {
 
 	@Override
 	public void printFirstResult() {
-		int result = this.calculateResultingFrequency();
-		System.out.println("Your puzzle answer was " + result + ".");
+		System.out.println("Your puzzle answer was " + firstResult + ".");
 
 	}
 
@@ -50,11 +52,10 @@ public class Day01 extends AbstractDay implements DayChallenge {
 
 	@Override
 	public void printSecondResult() {
-		int result = this.calculateFrequencyReachesTwice();
-		System.out.println("Your puzzle answer was " + result + ".");
+		System.out.println("Your puzzle answer was " + secondResult + ".");
 
-	}	
-	
+	}
+
 	public int calculateResultingFrequency() {
 		int frequency = 0;
 		try (Scanner sc = new Scanner(this.inputFile)) {
@@ -89,5 +90,11 @@ public class Day01 extends AbstractDay implements DayChallenge {
 			}
 		}
 		return frequency;
+	}
+
+	@Override
+	public void solveChallenge() {
+		firstResult = this.calculateResultingFrequency();
+		secondResult = this.calculateFrequencyReachesTwice();
 	}
 }

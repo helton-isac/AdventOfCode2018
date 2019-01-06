@@ -8,5 +8,5 @@ public interface DayChallenge {
 	void printFirstResult();
 	void printSecondChallenge();
 	void printSecondResult();
-	
+	void solveChallenge();
 }

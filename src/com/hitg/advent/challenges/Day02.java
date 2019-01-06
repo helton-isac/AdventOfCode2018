@@ -10,6 +10,9 @@ import java.util.Set;
 
 public class Day02 extends AbstractDay implements DayChallenge {
 
+	int firstResult = -1;
+	String secondResult = "";
+
 	/**
 	 * Public Constructor.
 	 * 
@@ -18,7 +21,7 @@ public class Day02 extends AbstractDay implements DayChallenge {
 	public Day02(Path inputFile) {
 		super(inputFile);
 	}
-	
+
 	@Override
 	public void printChallengeName() {
 		System.out.println("--- Day 2: Inventory Management System ---");
@@ -38,8 +41,7 @@ public class Day02 extends AbstractDay implements DayChallenge {
 
 	@Override
 	public void printFirstResult() {
-		int result = this.calculateCheckSum();
-		System.out.println("Your puzzle answer was " + result + ".");
+		System.out.println("Your puzzle answer was " + firstResult + ".");
 
 	}
 
@@ -51,10 +53,9 @@ public class Day02 extends AbstractDay implements DayChallenge {
 
 	@Override
 	public void printSecondResult() {
-		String result = this.findBoxes();
-		System.out.println("Your puzzle answer was " + result + ".");
+		System.out.println("Your puzzle answer was " + secondResult + ".");
 	}
-	
+
 	public int calculateCheckSum() {
 		int twoCharsOcurrence = 0;
 		int threeCharsOcurrence = 0;
@@ -107,13 +108,13 @@ public class Day02 extends AbstractDay implements DayChallenge {
 			while (sc.hasNextLine()) {
 				String line = sc.nextLine();
 				for (int i = 0; i < line.length(); i++) {
-					String combination = line.substring(0, i) +"_"+ line.substring(i + 1, line.length());
+					String combination = line.substring(0, i) + "_" + line.substring(i + 1, line.length());
 					if (!allCombinations.add(combination)) {
 						result = combination.replace("_", "");
 						break;
 					}
 				}
-				if(!"".equals(result)) {
+				if (!"".equals(result)) {
 					break;
 				}
 			}
@@ -122,6 +123,13 @@ public class Day02 extends AbstractDay implements DayChallenge {
 			e.printStackTrace();
 		}
 		return result;
+	}
+
+	@Override
+	public void solveChallenge() {
+		firstResult = this.calculateCheckSum();
+		secondResult = this.findBoxes();
+
 	}
 
 }

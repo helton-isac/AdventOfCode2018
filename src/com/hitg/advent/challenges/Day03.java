@@ -26,7 +26,6 @@ public class Day03 extends AbstractDay implements DayChallenge {
 	 */
 	public Day03(Path inputFile) {
 		super(inputFile);
-		this.solveChallenge();
 	}
 
 	@Override

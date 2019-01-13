@@ -17,6 +17,25 @@ public class Main {
 		executeChallenge(new Day04(Path.of("res\\input_day04.txt")));
 		executeChallenge(new Day05(Path.of("res\\input_day05.txt")));
 		executeChallenge(new Day06(Path.of("res\\input_day06.txt")));
+		executeChallenge(new Day07(Path.of("res\\input_day07.txt")));
+		executeChallenge(new Day08(Path.of("res\\input_day08.txt")));
+		executeChallenge(new Day09(Path.of("res\\input_day09.txt")));
+		executeChallenge(new Day10(Path.of("res\\input_day10.txt")));
+		executeChallenge(new Day11(Path.of("res\\input_day11.txt")));
+		executeChallenge(new Day12(Path.of("res\\input_day12.txt")));
+		executeChallenge(new Day13(Path.of("res\\input_day13.txt")));
+		executeChallenge(new Day14(Path.of("res\\input_day14.txt")));
+		executeChallenge(new Day15(Path.of("res\\input_day15.txt")));
+		executeChallenge(new Day16(Path.of("res\\input_day16.txt")));
+		executeChallenge(new Day17(Path.of("res\\input_day17.txt")));
+		executeChallenge(new Day18(Path.of("res\\input_day18.txt")));
+		executeChallenge(new Day19(Path.of("res\\input_day19.txt")));
+		executeChallenge(new Day20(Path.of("res\\input_day20.txt")));
+		executeChallenge(new Day21(Path.of("res\\input_day21.txt")));
+		executeChallenge(new Day22(Path.of("res\\input_day22.txt")));
+		executeChallenge(new Day23(Path.of("res\\input_day23.txt")));
+		executeChallenge(new Day24(Path.of("res\\input_day24.txt")));
+		executeChallenge(new Day25(Path.of("res\\input_day25.txt")));
 	}
 
 	private static void executeChallenge(DayChallenge challenge) {
